@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {notyourapi} from './Apikey';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTint, faWind } from '@fortawesome/free-solid-svg-icons';
+
 
 function Weather() {
   const [city, setCity] = useState("");
@@ -14,7 +18,7 @@ function Weather() {
 
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0e2f2d035b6b20b81393375509948c0e&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${notyourapi}&units=metric`
       )
       .then((response) => {
         setTemp(response.data.main.temp);
@@ -25,7 +29,7 @@ function Weather() {
   };
 
   return (
-    <div>
+    <div classname ="output">
       <h1>Weather App</h1>
       <form onSubmit={handleFormSubmit}>
         <input
@@ -37,9 +41,9 @@ function Weather() {
         <button type="submit">Get Weather</button>
       </form>
       {temp && (
-        <div>
+        <div >
           <h2>{city}</h2>
-          <p>Temperature: {temp}°C</p>
+          <p class="weather-info">Temperature: {temp}°C</p>
         </div>
       )}
     </div>
