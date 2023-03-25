@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {notyourapi} from './Apikey';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTint, faWind } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function Weather() {
