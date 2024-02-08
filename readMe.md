@@ -11,4 +11,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Run `git clone https://github.com/shibuKB/WeatherApp` and wait for the it download.
 * Now run `npm -i` to  install all required dependcies.
 * Use `npm start` to run your web app.
-* If there are no error, app will run on `localhost:8080`. Copy paste it in broswer to access to see the app working.
+* If there are no error, app will run on `localhost:3000`. Copy paste it in broswer to access to see the app working.
